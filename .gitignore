@@ -1,6 +1,6 @@
 HELP.md
-#/target/
-#!.mvn/wrapper/maven-wrapper.jar
+/target/
+!.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
 .apt_generated
@@ -17,13 +17,8 @@ HELP.md
 *.iml
 *.ipr
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-/build/
+# Ignore .idea files
+.idea/
 
 ### VS Code ###
 .vscode/

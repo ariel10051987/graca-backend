@@ -211,3 +211,7 @@ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP
 	at java.base/java.lang.Thread.run(Thread.java:830) ~[na:na]
 
 2020-08-02 12:19:42.278  WARN 6420 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2020-08-02 12:29:55.282  INFO 6420 --- [Thread-5] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-08-02 12:29:55.289  INFO 6420 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-02 12:29:55.294  INFO 6420 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-02 12:29:55.300  INFO 6420 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
