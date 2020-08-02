@@ -17,8 +17,5 @@ HELP.md
 *.iml
 *.ipr
 
-# Ignore .idea files
-.idea/
-
 ### VS Code ###
 .vscode/
