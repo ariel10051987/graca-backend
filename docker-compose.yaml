@@ -1,0 +1,7 @@
+api_graca:
+  container_name: api_graca
+  build: .
+  ports:
+    - 85:8080
+  volumes:
+    - ./../:/app/
