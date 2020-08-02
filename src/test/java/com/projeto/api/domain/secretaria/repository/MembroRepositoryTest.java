@@ -65,7 +65,6 @@ class MembroRepositoryTest {
         // Execucao
         Optional<Membro> find = repo.findById(membro.getIdMembro());
 
-
         // Verificacao
          assertTrue( find.isPresent() );
 
