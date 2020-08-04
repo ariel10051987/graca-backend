@@ -4,4 +4,4 @@ api_graca:
   ports:
     - 85:8080
   volumes:
-    - ./../:/app/
+    - ./:/app/

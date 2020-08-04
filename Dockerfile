@@ -1,8 +1,16 @@
+#
+# Build stage
+#
+FROM maven:3.6.0-jdk-8-slim AS build
+COPY src /app/src
+COPY pom.xml /app
+RUN mvn -f /app/pom.xml clean package
 
+#
+# Package stage
+#
 FROM openjdk:8-jdk-alpine
 
-#RUN mkdir -p /var/wwww/html/
+COPY --from=build /app/target/graca-1.0-SNAPSHOT.jar /usr/local/lib/graca-1.0-SNAPSHOT.jar
 
-#COPY /var/www/html/target/api-0.0.1-SNAPSHOT.jar /var/www/html/api-0.0.1-SNAPSHOT.jar
-
-ENTRYPOINT ["java","-jar","/app/java/target/cursomc-0.0.2-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/usr/local/lib/graca-1.0-SNAPSHOT.jar"]
