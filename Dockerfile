@@ -4,7 +4,7 @@
 FROM maven:3.6.0-jdk-8-slim AS build
 COPY src /app/src
 COPY pom.xml /app
-RUN mvn -f /app/pom.xml clean package
+RUN mvn -f /app/pom.xml clean package -DskipTests
 
 #
 # Package stage
